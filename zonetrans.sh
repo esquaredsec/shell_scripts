@@ -9,7 +9,7 @@ if [ -z "$1" ]; then
 	exit 0
 fi
 
-# If arguemtn was given, identify the DNS servers for the domain.
+# If arguement was given, identify the DNS servers for the domain.
 # For each of these servers, attempt a zone transfer
 
 for server in $(host -t ns $1 |cut -d" " -f4);do
